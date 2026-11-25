@@ -180,6 +180,7 @@ export interface Media {
   durationSeconds?: number | null;
   poster?: (number | null) | Media;
   deliveryUrl?: string | null;
+  _objectKey?: string | null;
   updatedAt: string;
   createdAt: string;
   url?: string | null;
@@ -597,6 +598,7 @@ export interface MediaSelect<T extends boolean = true> {
   durationSeconds?: T;
   poster?: T;
   deliveryUrl?: T;
+  _objectKey?: T;
   updatedAt?: T;
   createdAt?: T;
   url?: T;
