@@ -368,8 +368,8 @@ html:has(.topbar-has-announcement) { scroll-padding-top: calc(var(--bar) + var(-
   .process-node-bullet { width: 2.4rem; height: 2.4rem; font-size: .95rem; }
   .process-card {
     scroll-snap-align: start;
-    flex: 0 0 clamp(16.5rem, 80vw, 22rem);
-    padding: 1.75rem 1.5rem;
+    flex: 0 0 min(86vw, 24rem);
+    padding: 1.65rem 1.35rem;
   }
   .process-carousel {
     scroll-snap-type: x mandatory;
@@ -1127,8 +1127,8 @@ figcaption { margin-top: .6rem; }
   .about-section, .contact-grid { grid-template-columns: 1fr; }
   .about-section { gap: 2rem; }
   .about-photo { aspect-ratio: 1.12; margin-top: 0; }
-  .carousel-slide { flex-basis: 82%; }
-  .project-carousel .carousel-slide, .project-carousel:has(.carousel-slide:nth-child(3)) .carousel-slide { flex-basis: 82%; }
+  .carousel-slide { flex-basis: 100%; }
+  .project-carousel .carousel-slide, .project-carousel:has(.carousel-slide:nth-child(3)) .carousel-slide { flex-basis: 100%; }
   .project-carousel .carousel-slide:only-child { flex-basis: 100%; }
   .project-carousel .carousel-slide:only-child .photo { aspect-ratio: 4 / 3; }
   .catalog-pagination { padding-inline-end: max(0px, calc(3.85rem - var(--gutter))); }
@@ -1212,10 +1212,11 @@ figcaption { margin-top: .6rem; }
   }
   .contact-form {
     gap: 0.85rem;
+    padding-inline-end: 0;
   }
   .contact-form-row {
-    grid-template-columns: 1fr 1fr;
-    gap: 0.6rem;
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
   }
   .contact-form-label {
     font-size: 0.78rem;
